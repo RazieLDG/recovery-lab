@@ -24,6 +24,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          cd "$RUNNER_TEMP"
           base=https://github.com/Shopify/toxiproxy/releases/download/v2.12.0
           curl --fail --location "$base/toxiproxy_2.12.0_linux_amd64.tar.gz" -o toxiproxy.tar.gz
           curl --fail --location "$base/checksums.txt" -o checksums.txt
@@ -34,3 +35,17 @@ jobs:
           tar -xzf toxiproxy.tar.gz -C "$RUNNER_TEMP/toxiproxy" toxiproxy-server
           echo "TOXIPROXY_BIN=$RUNNER_TEMP/toxiproxy/toxiproxy-server" >> "$GITHUB_ENV"
       - run: cargo test --locked --features fault-injection --test real_toxiproxy -- --ignored --test-threads=1
+      - name: Verify documentation in both feature configurations
+        env:
+          RUSTDOCFLAGS: -D warnings
+        run: |
+          cargo doc --locked --no-default-features --no-deps
+          cargo doc --locked --all-features --no-deps
+      - name: Verify distributable packages
+        run: |
+          cargo package --locked --no-default-features
+          cargo package --locked --all-features
+          cargo test --locked --manifest-path target/package/recovery-lab-0.1.0/Cargo.toml --no-default-features
+          cargo test --locked --manifest-path target/package/recovery-lab-0.1.0/Cargo.toml --all-features
+          cargo test --locked --manifest-path target/package/recovery-lab-0.1.0/Cargo.toml --no-default-features --example monitor
+          cargo test --locked --manifest-path target/package/recovery-lab-0.1.0/Cargo.toml --all-features --test real_toxiproxy -- --ignored --test-threads=1

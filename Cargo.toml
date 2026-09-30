@@ -2,12 +2,24 @@
 name = "recovery-lab"
 version = "0.1.0"
 edition = "2021"
-rust-version = "1.98"
+rust-version = "1.98.1"
 license = "Apache-2.0"
 description = "Passive async health monitoring and opt-in local recovery testing"
-publish = false
+publish = ["crates-io"]
+repository = "https://github.com/RazieLDG/recovery-lab"
+homepage = "https://behoin.tech/"
+documentation = "https://docs.rs/recovery-lab"
+readme = "README.md"
+keywords = ["monitoring", "resilience", "testing", "async", "chaos"]
+categories = ["asynchronous", "development-tools::testing", "network-programming"]
+include = ["src/**", "examples/**", "Cargo.toml", "Cargo.lock", "README.md", "LICENSE"]
 default-run = "recovery-lab"
 autotests = false
+
+[package.metadata.docs.rs]
+all-features = true
+default-target = "x86_64-unknown-linux-gnu"
+targets = ["x86_64-unknown-linux-gnu"]
 
 [features]
 default = []
