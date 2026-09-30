@@ -1,5 +1,7 @@
 # Recovery Lab
 
+> **Under heavy, active development.** This is an experimental pre-1.0 project. APIs and behavior are still evolving; do not assume production readiness. Breaking API changes are planned for new minor versions (for example, 0.1 to 0.2); patch versions are intended for compatible fixes. Review changes and validate them against your application before upgrading.
+
 A Rust library and CLI for observing dependency health and testing application recovery.
 
 ## Two ways to use it
@@ -23,13 +25,27 @@ A plain `cargo build` builds the passive library, not the feature-gated CLIs. To
 
 ## Embed the library
 
-The crate is not published to crates.io. With a local checkout, an application's Cargo dependencies can use:
+For a local checkout, use a path dependency:
 
 ```toml
 [dependencies]
 recovery-lab = { path = "../recovery-lab", default-features = false }
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 ```
+
+For an available crates.io release, use the registry dependency below. Verify that the requested version exists before installing; these commands do not assert registry availability:
+
+```toml
+recovery-lab = { version = "0.1.0", default-features = false }
+```
+
+The corresponding CLI installation command is:
+
+```sh
+cargo install recovery-lab --version 0.1.0 --locked --features fault-injection --bin recovery-lab
+```
+
+To install from a local checkout instead, use `cargo install --path . --locked --features fault-injection --bin recovery-lab`. The optional reference tool can be selected with `--bin recovery-fixture`. [API documentation on docs.rs](https://docs.rs/recovery-lab) is available for published versions after their documentation build succeeds.
 
 See [examples/monitor.rs](examples/monitor.rs) for a complete, compile-tested consumer of the public API. Replace its application probe with an `HttpProbe` to observe a dependency endpoint, or implement `Probe` for your application's own checks. Your application owns retries, reconnect calls, work scheduling and other responses to events.
 
@@ -51,7 +67,7 @@ The built-in HTTP probe uses normal TLS verification for HTTPS and bounded async
 
 ## Requirements and checks
 
-- Rust 1.98+; CI pins 1.98.1
+- Rust 1.98.1 or newer; 1.98.1 is the declared and tested minimum
 - An official [Toxiproxy](https://github.com/Shopify/toxiproxy) 2.12.0 binary only for real fault tests
 - An isolated local environment for fault injection
 
@@ -148,6 +164,15 @@ Reports contain scenario names, phase messages, timings and outcomes. They omit 
 
 Cleanup failure takes priority over cancellation. Output paths are reserved before mutation. Invalid CLI syntax cannot produce reports when destinations are unknown. A later report-write failure returns 2; an earlier successfully written report may still describe the completed test outcome.
 
+## Compatibility expectations
+
+- **Rust:** the minimum supported Rust version is 1.98.1. CI validates that exact toolchain
+- **Runtime:** passive monitoring requires a Tokio runtime with its time driver enabled; custom probes must be cooperative, cancellation-safe futures
+- **Features:** default features are empty; passive monitoring is the default API. `fault-injection` explicitly enables the blocking runner, CLI and fixture. Keep it disabled in passive-only applications
+- **Reports:** fault-test JSON carries `schema_version: 1`. This identifies the current layout; it is not a promise that the experimental format will never change. Consumers should check the version and tolerate additional fields
+- **Platforms:** Linux x86_64 is currently tested. macOS, Windows, other architectures and an actual HTTPS handshake are not claimed as verified
+- **Versioning:** this is an early 0.1 API. Future 0.x minor releases may be incompatible; use a lockfile or an appropriate version constraint and read release changes
+
 ## Development and CI
 
 ```sh
@@ -171,7 +196,7 @@ Not supported: distributed orchestration, production/remote fault injection, det
 
 ## License
 
-Licensed under [Apache License 2.0](LICENSE). Dependencies retain their respective licenses and notice requirements. Cargo publication remains disabled; a package release is a separate decision.
+Licensed under [Apache License 2.0](LICENSE). Dependencies retain their respective licenses and notice requirements. The package is configured for crates.io; package preparation and dry runs do not publish a release.
 
 ## Beyond Horizons
 
