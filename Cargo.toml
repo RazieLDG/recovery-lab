@@ -4,30 +4,49 @@ version = "0.1.0"
 edition = "2021"
 rust-version = "1.98"
 license = "Apache-2.0"
-description = "Bounded local application recovery assertions using Toxiproxy"
+description = "Passive async health monitoring and opt-in local recovery testing"
 publish = false
 default-run = "recovery-lab"
 autotests = false
 
+[features]
+default = []
+fault-injection = ["reqwest/blocking", "dep:ctrlc", "dep:tiny_http"]
+
 [dependencies]
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-reqwest = { version = "0.12", default-features = false, features = ["blocking", "json"] }
-ctrlc = { version = "3.4", features = ["termination"] }
-tiny_http = "0.12"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+ctrlc = { version = "3.4", features = ["termination"], optional = true }
+tiny_http = { version = "0.12", optional = true }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "sync"] }
 
 [dev-dependencies]
+tiny_http = "0.12"
+tokio = { version = "1", features = ["test-util"] }
 tempfile = "3"
 quick-xml = "0.38"
 nix = { version = "0.31", features = ["signal", "process"] }
 
+[[bin]]
+name = "recovery-lab"
+path = "src/main.rs"
+required-features = ["fault-injection"]
+
+[[bin]]
+name = "recovery-fixture"
+path = "src/bin/recovery-fixture.rs"
+required-features = ["fault-injection"]
+
 [[test]]
 name = "recovery"
 path = "src/integration/recovery.rs"
+required-features = ["fault-injection"]
 
 [[test]]
 name = "real_toxiproxy"
 path = "src/integration/real_toxiproxy.rs"
+required-features = ["fault-injection"]
 
 [profile.release]
 strip = true
