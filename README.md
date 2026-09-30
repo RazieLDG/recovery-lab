@@ -115,3 +115,7 @@ The test suite must explicitly distinguish mock protocol/cleanup tests from real
 - Choose and add an open-source license before public distribution; no license or copyright owner is presumed
 
 The next useful milestone is validating against a real application's reconnect/backoff behavior, then adding a sustained-recovery window and durable cleanup evidence.
+
+## Beyond Horizons
+
+Company website: [Beyond Horizons](https://behoin.tech/).
