@@ -1,0 +1,33 @@
+[package]
+name = "recovery-lab"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.98"
+license = "Apache-2.0"
+description = "Bounded local application recovery assertions using Toxiproxy"
+publish = false
+default-run = "recovery-lab"
+autotests = false
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["blocking", "json"] }
+ctrlc = { version = "3.4", features = ["termination"] }
+tiny_http = "0.12"
+
+[dev-dependencies]
+tempfile = "3"
+quick-xml = "0.38"
+nix = { version = "0.31", features = ["signal", "process"] }
+
+[[test]]
+name = "recovery"
+path = "src/integration/recovery.rs"
+
+[[test]]
+name = "real_toxiproxy"
+path = "src/integration/real_toxiproxy.rs"
+
+[profile.release]
+strip = true

@@ -1,0 +1,15 @@
+{
+  "name": "dependency-latency",
+  "toxiproxy_url": "http://127.0.0.1:8474",
+  "proxy": "reference",
+  "health_url": "http://127.0.0.1:18080/healthz",
+  "fault": {
+    "kind": "latency",
+    "duration_ms": 1500,
+    "latency_ms": 1000
+  },
+  "request_timeout_ms": 300,
+  "recovery_timeout_ms": 5000,
+  "poll_interval_ms": 100,
+  "preflight_timeout_ms": 3000
+}
