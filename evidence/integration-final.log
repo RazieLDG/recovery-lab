@@ -1,0 +1,30 @@
+test_backend_and_retry_app_are_healthy (tests.test_fixture.ReferenceFixtureTests.test_backend_and_retry_app_are_healthy) ... ok
+test_retry_recovers_and_latch_remains_failed (tests.test_fixture.ReferenceFixtureTests.test_retry_recovers_and_latch_remains_failed) ... ok
+test_all_faults_recover_and_restore_proxy (tests.test_mock_contract.MockContractTests.test_all_faults_recover_and_restore_proxy) ... ok
+test_cleanup_failure_has_dedicated_exit (tests.test_mock_contract.MockContractTests.test_cleanup_failure_has_dedicated_exit) ... ok
+test_existing_report_destinations_rejected_without_mutation (tests.test_mock_contract.MockContractTests.test_existing_report_destinations_rejected_without_mutation) ... ok
+test_fault_window_exact_minimum_is_accepted (tests.test_mock_contract.MockContractTests.test_fault_window_exact_minimum_is_accepted) ... ok
+test_fault_window_too_short_rejected_without_mutation (tests.test_mock_contract.MockContractTests.test_fault_window_too_short_rejected_without_mutation) ... ok
+test_late_healthy_response_does_not_pass_deadline (tests.test_mock_contract.MockContractTests.test_late_healthy_response_does_not_pass_deadline) ... ok
+test_mutation_response_loss_still_cleans_up (tests.test_mock_contract.MockContractTests.test_mutation_response_loss_still_cleans_up) ... ok
+test_no_observable_fault_is_inconclusive_failure (tests.test_mock_contract.MockContractTests.test_no_observable_fault_is_inconclusive_failure) ... ok
+test_nonrecoverable_app_fails_but_proxy_is_restored (tests.test_mock_contract.MockContractTests.test_nonrecoverable_app_fails_but_proxy_is_restored) ... ok
+test_preexisting_disabled_proxy_is_rejected (tests.test_mock_contract.MockContractTests.test_preexisting_disabled_proxy_is_rejected) ... ok
+test_rejects_preexisting_toxic_without_changing_it (tests.test_mock_contract.MockContractTests.test_rejects_preexisting_toxic_without_changing_it) ... ok
+test_remote_targets_rejected_by_default (tests.test_mock_contract.MockContractTests.test_remote_targets_rejected_by_default) ... ok
+test_sigint_removes_only_owned_toxic (tests.test_mock_contract.MockContractTests.test_sigint_removes_only_owned_toxic) ... ok
+test_sigint_restores_outage (tests.test_mock_contract.MockContractTests.test_sigint_restores_outage) ... ok
+test_unknown_fault_field_rejected_without_mutation (tests.test_mock_contract.MockContractTests.test_unknown_fault_field_rejected_without_mutation) ... ok
+test_unknown_field_rejected_without_mutation (tests.test_mock_contract.MockContractTests.test_unknown_field_rejected_without_mutation) ... ok
+test_xml_noncharacters_are_sanitized_in_junit (tests.test_mock_contract.MockContractTests.test_xml_noncharacters_are_sanitized_in_junit) ... ok
+test_real_latency_recovers (tests.test_real_toxiproxy.RealToxiproxyTests.test_real_latency_recovers) ... ok
+test_real_nonrecoverable_app_fails (tests.test_real_toxiproxy.RealToxiproxyTests.test_real_nonrecoverable_app_fails) ... ok
+test_real_outage_recovers (tests.test_real_toxiproxy.RealToxiproxyTests.test_real_outage_recovers) ... ok
+test_real_reset_peer_recovers (tests.test_real_toxiproxy.RealToxiproxyTests.test_real_reset_peer_recovers) ... ok
+test_real_sigint_restores_connectivity (tests.test_real_toxiproxy.RealToxiproxyTests.test_real_sigint_restores_connectivity) ... ok
+test_real_sigterm_removes_latency_toxic (tests.test_real_toxiproxy.RealToxiproxyTests.test_real_sigterm_removes_latency_toxic) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 39.224s
+
+OK

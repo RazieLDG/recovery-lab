@@ -1,0 +1,1 @@
+{"name": "outage-recovered", "toxiproxy_url": "http://127.0.0.1:39259", "proxy": "reference", "health_url": "http://127.0.0.1:39197/healthz", "fault": {"kind": "outage", "duration_ms": 500}, "request_timeout_ms": 150, "recovery_timeout_ms": 1500, "poll_interval_ms": 25, "preflight_timeout_ms": 1500}

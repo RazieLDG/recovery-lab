@@ -1,0 +1,62 @@
+{
+  "recorded_at_utc": "2026-09-30T11:26:36.900915+00:00",
+  "engine": "real-toxiproxy",
+  "binary": "/workspace/scratch/1217d29d7141/recovery-lab/target/debug/recovery-lab",
+  "toxiproxy_binary": "/workspace/shared/recovery-toolchain/toxiproxy-server",
+  "cases": [
+    {
+      "name": "outage-recovered",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "proxy_restored": true,
+      "verified": true,
+      "report": "outage-recovered/report.json",
+      "junit": "outage-recovered/report.xml"
+    },
+    {
+      "name": "latency-recovered",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "proxy_restored": true,
+      "verified": true,
+      "report": "latency-recovered/report.json",
+      "junit": "latency-recovered/report.xml"
+    },
+    {
+      "name": "reset-peer-recovered",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "proxy_restored": true,
+      "verified": true,
+      "report": "reset-peer-recovered/report.json",
+      "junit": "reset-peer-recovered/report.xml"
+    },
+    {
+      "name": "latched-app-failed",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "proxy_restored": true,
+      "verified": true,
+      "report": "latched-app-failed/report.json",
+      "junit": "latched-app-failed/report.xml"
+    },
+    {
+      "name": "sigint-restored",
+      "expected_exit": 130,
+      "actual_exit": 130,
+      "proxy_restored": true,
+      "verified": true,
+      "report": "sigint-restored/report.json",
+      "junit": "sigint-restored/report.xml"
+    },
+    {
+      "name": "sigterm-restored",
+      "expected_exit": 130,
+      "actual_exit": 130,
+      "proxy_restored": true,
+      "verified": true,
+      "report": "sigterm-restored/report.json",
+      "junit": "sigterm-restored/report.xml"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+      2 ms  preflight: checking application health
+      3 ms  fault: injection acknowledged
+    503 ms  restore: removing only this run's fault
+    504 ms  restore: connectivity restored
+    504 ms  recovery: waiting for healthy HTTP status
+   2004 ms  assertion: application did not recover within deadline
+result: failed (exit 1)

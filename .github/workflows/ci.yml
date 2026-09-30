@@ -1,0 +1,32 @@
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+          toolchain: 1.98.1
+      - run: cargo fmt --check
+      - run: cargo clippy --locked --all-targets -- -D warnings
+      - run: cargo test --locked
+      - run: cargo build --locked
+      - name: Install pinned official Toxiproxy
+        shell: bash
+        run: |
+          set -euo pipefail
+          base=https://github.com/Shopify/toxiproxy/releases/download/v2.12.0
+          curl --fail --location "$base/toxiproxy_2.12.0_linux_amd64.tar.gz" -o toxiproxy.tar.gz
+          curl --fail --location "$base/checksums.txt" -o checksums.txt
+          expected=$(awk '$2 == "toxiproxy_2.12.0_linux_amd64.tar.gz" {print $1}' checksums.txt)
+          test -n "$expected"
+          echo "$expected  toxiproxy.tar.gz" | sha256sum --check
+          mkdir -p "$RUNNER_TEMP/toxiproxy"
+          tar -xzf toxiproxy.tar.gz -C "$RUNNER_TEMP/toxiproxy" toxiproxy-server
+          echo "TOXIPROXY_BIN=$RUNNER_TEMP/toxiproxy/toxiproxy-server" >> "$GITHUB_ENV"
+      - run: python3 scripts/test_integration.py --suite all --require-real

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "scenario": "latched-app-failed",
+  "outcome": "failed",
+  "exit_code": 1,
+  "cleanup": "succeeded",
+  "elapsed_ms": 2005,
+  "events": [
+    {
+      "elapsed_ms": 2,
+      "phase": "preflight",
+      "detail": "checking application health"
+    },
+    {
+      "elapsed_ms": 3,
+      "phase": "fault",
+      "detail": "injection acknowledged"
+    },
+    {
+      "elapsed_ms": 503,
+      "phase": "restore",
+      "detail": "removing only this run's fault"
+    },
+    {
+      "elapsed_ms": 504,
+      "phase": "restore",
+      "detail": "connectivity restored"
+    },
+    {
+      "elapsed_ms": 504,
+      "phase": "recovery",
+      "detail": "waiting for healthy HTTP status"
+    },
+    {
+      "elapsed_ms": 2004,
+      "phase": "assertion",
+      "detail": "application did not recover within deadline"
+    }
+  ]
+}

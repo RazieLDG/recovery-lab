@@ -1,0 +1,28 @@
+{
+  "before": {
+    "name": "reference",
+    "listen": "127.0.0.1:50933",
+    "upstream": "127.0.0.1:37709",
+    "enabled": true,
+    "Logger": {},
+    "toxics": []
+  },
+  "after": {
+    "name": "reference",
+    "listen": "127.0.0.1:50933",
+    "upstream": "127.0.0.1:37709",
+    "enabled": true,
+    "Logger": {},
+    "toxics": []
+  },
+  "restored": true,
+  "application": {
+    "healthy": true,
+    "latched": false,
+    "mode": "retry",
+    "attempts": 2,
+    "successes": 2,
+    "failures": 0,
+    "last_error": null
+  }
+}

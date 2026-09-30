@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "scenario": "latency-recovered",
+  "outcome": "passed",
+  "exit_code": 0,
+  "cleanup": "succeeded",
+  "elapsed_ms": 531,
+  "events": [
+    {
+      "elapsed_ms": 1,
+      "phase": "preflight",
+      "detail": "checking application health"
+    },
+    {
+      "elapsed_ms": 2,
+      "phase": "fault",
+      "detail": "injection acknowledged"
+    },
+    {
+      "elapsed_ms": 502,
+      "phase": "restore",
+      "detail": "removing only this run's fault"
+    },
+    {
+      "elapsed_ms": 504,
+      "phase": "restore",
+      "detail": "connectivity restored"
+    },
+    {
+      "elapsed_ms": 504,
+      "phase": "recovery",
+      "detail": "waiting for healthy HTTP status"
+    },
+    {
+      "elapsed_ms": 531,
+      "phase": "assertion",
+      "detail": "application recovered within deadline"
+    }
+  ]
+}

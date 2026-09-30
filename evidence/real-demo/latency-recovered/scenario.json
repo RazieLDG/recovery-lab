@@ -1,0 +1,1 @@
+{"name": "latency-recovered", "toxiproxy_url": "http://127.0.0.1:46905", "proxy": "reference", "health_url": "http://127.0.0.1:42059/healthz", "fault": {"kind": "latency", "duration_ms": 500, "latency_ms": 400}, "request_timeout_ms": 150, "recovery_timeout_ms": 1500, "poll_interval_ms": 25, "preflight_timeout_ms": 1500}

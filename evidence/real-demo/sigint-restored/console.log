@@ -1,0 +1,5 @@
+      1 ms  preflight: checking application health
+      2 ms  fault: injection acknowledged
+     23 ms  restore: removing only this run's fault
+     24 ms  restore: connectivity restored
+result: cancelled (exit 130)

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="recovery-lab" tests="1" failures="0" errors="1" time="0.025"><testcase name="sigterm-restored" time="0.025"><error message="cancelled">preflight: checking application health
+fault: injection acknowledged
+restore: removing only this run&apos;s fault
+restore: connectivity restored</error></testcase></testsuite>
