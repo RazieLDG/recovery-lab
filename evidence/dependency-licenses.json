@@ -1,0 +1,2228 @@
+{
+  "schema_version": 1,
+  "review_date_utc": "2026-09-30",
+  "project": {
+    "name": "recovery-lab",
+    "version": "0.1.0",
+    "owner_selected_license": "Apache-2.0",
+    "excluded_from_third_party_counts": true
+  },
+  "review_kind": "Declared Cargo package license metadata inventory and manual expression-level screening; not a source/license-file audit or legal opinion.",
+  "cargo_lock": {
+    "path": "Cargo.lock",
+    "sha256": "40554dea5ff4139b926765324662f86113d4f24589e78b30d6769ed3daae6070",
+    "format_version": 3,
+    "package_records_including_project": 98,
+    "all_target_metadata_matches_lock_package_identity_set": true
+  },
+  "toolchain": {
+    "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+    "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "host": "x86_64-unknown-linux-gnu"
+  },
+  "commands": [
+    "cargo metadata --locked --format-version 1",
+    "cargo metadata --locked --format-version 1 --filter-platform x86_64-unknown-linux-gnu"
+  ],
+  "scope": {
+    "all_targets": "Resolved locked dependency graph for the current project feature selection, without platform filtering; includes direct and transitive packages and applicable build/proc-macro dependencies across platforms.",
+    "linux": "Resolve graph filtered to x86_64-unknown-linux-gnu; this is a metadata inventory, not a claim every node is linked into a release binary.",
+    "all_features_requested": false,
+    "excluded": [
+      "Source-file license detection",
+      "Dependency LICENSE/COPYRIGHT/NOTICE file audit",
+      "Vendored or embedded third-party code within crates",
+      "Non-Cargo tools, including Toxiproxy and test/development executables",
+      "System libraries and Rust standard library/toolchain",
+      "Release artifact contents and notice completeness",
+      "Security/vulnerability audit"
+    ]
+  },
+  "counts": {
+    "third_party_package_versions_all_targets": 97,
+    "third_party_unique_names_all_targets": 96,
+    "third_party_package_versions_linux": 81,
+    "direct_package_versions": 4,
+    "transitive_package_versions_all_targets": 93,
+    "other_target_only_package_versions": 16,
+    "missing_license_metadata": 0,
+    "unknown_license_identifiers_or_expressions_after_legacy_normalization": 0,
+    "obvious_strong_copyleft_expressions": 0,
+    "legacy_slash_expressions": 2,
+    "unicode_license_required_package_versions": 19,
+    "declared_license_file_fields": 0
+  },
+  "declared_license_expression_counts_all_targets": {
+    "(MIT OR Apache-2.0) AND Unicode-3.0": 1,
+    "Apache-2.0": 1,
+    "Apache-2.0 OR BSL-1.0": 1,
+    "Apache-2.0 OR MIT": 4,
+    "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT": 1,
+    "MIT": 23,
+    "MIT OR Apache-2.0": 44,
+    "MIT/Apache-2.0": 2,
+    "Unicode-3.0": 18,
+    "Unlicense OR MIT": 1,
+    "Zlib OR Apache-2.0 OR MIT": 1
+  },
+  "declared_license_expression_counts_linux": {
+    "(MIT OR Apache-2.0) AND Unicode-3.0": 1,
+    "Apache-2.0": 1,
+    "Apache-2.0 OR BSL-1.0": 1,
+    "Apache-2.0 OR MIT": 4,
+    "MIT": 20,
+    "MIT OR Apache-2.0": 33,
+    "MIT/Apache-2.0": 2,
+    "Unicode-3.0": 18,
+    "Unlicense OR MIT": 1
+  },
+  "findings": [
+    "All 97 third-party package-version records declare a license. The 98-record all-target metadata identity set equals Cargo.lock including the root project.",
+    "No unknown identifiers or obvious strong-copyleft expressions were found in this bounded metadata screen. This does not establish that source code or embedded content is correctly described by package metadata.",
+    "ctrlc 3.5.2 and serde_urlencoded 0.7.1 use deprecated MIT/Apache-2.0 notation. It is retained verbatim and treated as MIT OR Apache-2.0 for screening only.",
+    "All declarations offer a candidate permissive license path; alternatives are not a completed legal election or compliance guarantee.",
+    "18 declarations are Unicode-3.0 alone; unicode-ident 1.0.26 requires Unicode-3.0 alongside an MIT or Apache-2.0 choice. The AND condition must not be dropped.",
+    "A null license_file field means no such metadata field was declared, not that the upstream package has no license text.",
+    "The project Apache-2.0 license does not replace third-party licenses. Preserve actual upstream notices and meet chosen-license obligations for whatever is redistributed."
+  ],
+  "references": [
+    {
+      "title": "Cargo metadata command and platform filtering",
+      "url": "https://doc.rust-lang.org/cargo/commands/cargo-metadata.html"
+    },
+    {
+      "title": "Cargo license expressions and deprecated slash notation",
+      "url": "https://doc.rust-lang.org/cargo/reference/manifest.html#the-license-and-license-file-fields"
+    },
+    {
+      "title": "Apache License 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "title": "MIT License",
+      "url": "https://spdx.org/licenses/MIT.html"
+    },
+    {
+      "title": "Unicode License v3",
+      "url": "https://spdx.org/licenses/Unicode-3.0.html"
+    }
+  ],
+  "packages": [
+    {
+      "name": "atomic-waker",
+      "version": "1.1.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#atomic-waker@1.1.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "1505bd5d3d116872e7271a6d4e16d81d0c8570876c8de68093a09ac269d8aac0",
+      "repository": "https://github.com/smol-rs/atomic-waker",
+      "license_declared": "Apache-2.0 OR MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Apache-2.0 OR MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "base64",
+      "version": "0.22.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#base64@0.22.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6",
+      "repository": "https://github.com/marshallpierce/rust-base64",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "alloc",
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "alloc",
+        "default",
+        "std"
+      ]
+    },
+    {
+      "name": "base64",
+      "version": "0.23.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#base64@0.23.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "ac07cdecf99051d9a5238b80f35af32cdeba5b336e55d957b318b50137e18da5",
+      "repository": "https://github.com/marshallpierce/rust-base64",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "alloc",
+        "default",
+        "simd-unsafe",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "alloc",
+        "default",
+        "simd-unsafe",
+        "std"
+      ]
+    },
+    {
+      "name": "bitflags",
+      "version": "2.13.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#bitflags@2.13.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "3ded4057c258ba199e2d26386d3af3780957ecaee6c4ef4041c6b4b8b97c0b06",
+      "repository": "https://github.com/bitflags/bitflags",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "std"
+      ]
+    },
+    {
+      "name": "block2",
+      "version": "0.6.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#block2@0.6.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "cdeb9d870516001442e364c5220d3574d2da8dc765554b4a617230d33fa58ef5",
+      "repository": "https://github.com/madsmtm/objc2",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [
+        "alloc"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "bumpalo",
+      "version": "3.20.3",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#bumpalo@3.20.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "72f5acc6cb2ba439de613abc23857ec3d78374d8ed5ac84e9d11336e87da8649",
+      "repository": "https://github.com/fitzgen/bumpalo",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [
+        "default"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "bytes",
+      "version": "1.12.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#bytes@1.12.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "fc652a48c352aef3ea3aed32080501cf3ef6ed5da78602a020c991775b0aff04",
+      "repository": "https://github.com/tokio-rs/bytes",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "std"
+      ]
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.5",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.5",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "4e7648175b45a9a48536d676f68d918270699102aa8dab5496df06904c914600",
+      "repository": "https://github.com/rust-lang/cfg-if",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "cfg_aliases",
+      "version": "0.2.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg_aliases@0.2.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f079e83a288787bcd14a6aea84cee5c87a67c5a3e660c30f557a3d24761b3527",
+      "repository": "https://github.com/katharostech/cfg_aliases",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "ctrlc",
+      "version": "3.5.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#ctrlc@3.5.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "e0b1fab2ae45819af2d0731d60f2afe17227ebb1a1538a236da84c93e9a60162",
+      "repository": "https://github.com/Detegr/rust-ctrlc.git",
+      "license_declared": "MIT/Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": true,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": true,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "termination"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "termination"
+      ]
+    },
+    {
+      "name": "dispatch2",
+      "version": "0.3.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#dispatch2@0.3.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "1e0e367e4e7da84520dedcac1901e4da967309406d1e51017ae1abfb97adbd38",
+      "repository": "https://github.com/madsmtm/objc2",
+      "license_declared": "Zlib OR Apache-2.0 OR MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Zlib OR Apache-2.0 OR MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [
+        "alloc",
+        "block2",
+        "default",
+        "libc",
+        "objc2",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "displaydoc",
+      "version": "0.2.7",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#displaydoc@0.2.7",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "c6232dd377dcc64799954cbd3a9bb882e9cdc1308ccd87b1c098f1fb2eaf82a8",
+      "repository": "https://github.com/yaahc/displaydoc",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "form_urlencoded",
+      "version": "1.2.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#form_urlencoded@1.2.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "cb4cb245038516f5f85277875cdaa4f7d2c9a0fa0468de06ed190163b1581fcf",
+      "repository": "https://github.com/servo/rust-url",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "alloc",
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "alloc",
+        "default",
+        "std"
+      ]
+    },
+    {
+      "name": "futures-channel",
+      "version": "0.3.34",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-channel@0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "b1f9e3d69d39e4862ffed03ed071a76f9a13ba1d9109d355b0f0aa6b15e393c4",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "alloc",
+        "default",
+        "futures-sink",
+        "sink",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "alloc",
+        "default",
+        "futures-sink",
+        "sink",
+        "std"
+      ]
+    },
+    {
+      "name": "futures-core",
+      "version": "0.3.34",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "92d699e522242e69e3003b94ecc1f960f3a5e015aa7c5d7486e65ad01dd94f5e",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "alloc",
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "alloc",
+        "default",
+        "std"
+      ]
+    },
+    {
+      "name": "futures-io",
+      "version": "0.3.34",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-io@0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "53c0fa8157de1303bfffdaa1cc2a673bfffb60102f76b0ef4441659124373fed",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "std"
+      ]
+    },
+    {
+      "name": "futures-sink",
+      "version": "0.3.34",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-sink@0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "1944426bf7d03f1d14f708785e4b33efd750b36d48a157b836b3efc15ede8e1d",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "futures-task",
+      "version": "0.3.34",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-task@0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "cd417de3d1d015fc3bfd2b1ea46dfc7bab72ef86f1cc7cc9c78e728b34a6d1fd",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "alloc",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "alloc",
+        "std"
+      ]
+    },
+    {
+      "name": "futures-util",
+      "version": "0.3.34",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-util@0.3.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "0d50a92467f8ba5dd6e3ee5d4bd04d73ab2e4e1c44474a0674821dfce14b79bc",
+      "repository": "https://github.com/rust-lang/futures-rs",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "alloc",
+        "futures-io",
+        "futures-sink",
+        "io",
+        "memchr",
+        "sink",
+        "slab",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "alloc",
+        "futures-io",
+        "futures-sink",
+        "io",
+        "memchr",
+        "sink",
+        "slab",
+        "std"
+      ]
+    },
+    {
+      "name": "http",
+      "version": "1.5.0",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#http@1.5.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "918d3568bebf352712bc2ef3d46a8bcf1a75b373be6539de198e9105cbbf9ce0",
+      "repository": "https://github.com/hyperium/http",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "std"
+      ]
+    },
+    {
+      "name": "http-body",
+      "version": "1.1.0",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#http-body@1.1.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "ca2a8f2913ee65f60facd6a5905613afaa448497a0230cc41ce022d93290bc2c",
+      "repository": "https://github.com/hyperium/http-body",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "http-body-util",
+      "version": "0.1.5",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#http-body-util@0.1.5",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "23169fe34a5fbcdd3f3862e78fb9b6fccd5f02a6dc6f732547005d45631ce71c",
+      "repository": "https://github.com/hyperium/http-body",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default"
+      ]
+    },
+    {
+      "name": "httparse",
+      "version": "1.10.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#httparse@1.10.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "6dbf3de79e51f3d586ab4cb9d5c3e2c14aa28ed23d180cf89b4df0454a69cc87",
+      "repository": "https://github.com/seanmonstar/httparse",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "std"
+      ]
+    },
+    {
+      "name": "hyper",
+      "version": "1.11.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#hyper@1.11.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "27b501faa50e7a26c3d3560ca625132f4078a17771f4810baf70475ae48cbe43",
+      "repository": "https://github.com/hyperium/hyper",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "client",
+        "default",
+        "http1"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "client",
+        "default",
+        "http1"
+      ]
+    },
+    {
+      "name": "hyper-util",
+      "version": "0.1.21",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#hyper-util@0.1.21",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "ddc03d96684f9226b8a787cdb71488417b53ab5ea8fdb1dac946cb9431cc8bff",
+      "repository": "https://github.com/hyperium/hyper-util",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "client",
+        "client-legacy",
+        "client-proxy",
+        "default",
+        "http1",
+        "tokio"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "client",
+        "client-legacy",
+        "client-proxy",
+        "default",
+        "http1",
+        "tokio"
+      ]
+    },
+    {
+      "name": "icu_collections",
+      "version": "2.3.0",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#icu_collections@2.3.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "fa68d21081c4a05d5a901a1c62add574c77048b6a1c67be3b50ce0b60d4ca513",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "icu_locale_core",
+      "version": "2.3.0",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#icu_locale_core@2.3.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "d56e28588da92eee5c3201a6eff33fabdd49b62269c8938d4ff050ce4d900deb",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "zerovec"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "zerovec"
+      ]
+    },
+    {
+      "name": "icu_normalizer",
+      "version": "2.3.0",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#icu_normalizer@2.3.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "12f9cf5f235641ed274641dd81c3f28d870e276763d0797aeeab72317b1c646f",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "compiled_data"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "compiled_data"
+      ]
+    },
+    {
+      "name": "icu_normalizer_data",
+      "version": "2.3.0",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#icu_normalizer_data@2.3.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "1563da1ed3e0b3bf3d74c9b85917ac9c56464d2f57242270c09c9e752f8021a0",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "icu_properties",
+      "version": "2.3.0",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#icu_properties@2.3.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "7e7ca276ad3145661a65914e6daf131ca5120cd3dcee8f8f3214b8875184a148",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "compiled_data"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "compiled_data"
+      ]
+    },
+    {
+      "name": "icu_properties_data",
+      "version": "2.3.0",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#icu_properties_data@2.3.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "e590f038c1464a96894fd6d10127e90a8be4509f56ff7ecef851b15cee0b7caa",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "icu_provider",
+      "version": "2.3.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#icu_provider@2.3.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "d27bbb9d3abbefac45d55f647c9de1d44aafcd1186eb91879afef17c396c3e73",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "baked"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "baked"
+      ]
+    },
+    {
+      "name": "idna",
+      "version": "1.1.0",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#idna@1.1.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "3b0875f23caa03898994f6ddc501886a45c7d3d62d04d2d90788d47be1b1e4de",
+      "repository": "https://github.com/servo/rust-url/",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "alloc",
+        "compiled_data",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "alloc",
+        "compiled_data",
+        "std"
+      ]
+    },
+    {
+      "name": "idna_adapter",
+      "version": "1.2.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#idna_adapter@1.2.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "cb68373c0d6620ef8105e855e7745e18b0d00d3bdb07fb532e434244cdb9a714",
+      "repository": "https://github.com/hsivonen/idna_adapter",
+      "license_declared": "Apache-2.0 OR MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Apache-2.0 OR MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "compiled_data"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "compiled_data"
+      ]
+    },
+    {
+      "name": "ipnet",
+      "version": "2.12.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#ipnet@2.12.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "791930b43c0d5973160d90a8f3894509f2b273430f5c5c73b668636d0287c5c0",
+      "repository": "https://github.com/krisprice/ipnet",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "std"
+      ]
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.18",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#itoa@1.0.18",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "8f42a60cbdf9a97f5d2305f08a87dc4e09308d1276d28c869c684d7777685682",
+      "repository": "https://github.com/dtolnay/itoa",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "js-sys",
+      "version": "0.3.106",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#js-sys@0.3.106",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "7883d941dae510fb2d978fc3fe018c71c9e2892fd38854de3e8b92c2e5ad9cc5",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/js-sys",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [
+        "default",
+        "std",
+        "unsafe-eval"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "libc",
+      "version": "0.2.189",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.189",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "3eaf3ede3fee6db1a4c2ee091bf8a8b4dccdc6d17f656fb07896ee72867612f2",
+      "repository": "https://github.com/rust-lang/libc",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "extra_traits",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "extra_traits",
+        "std"
+      ]
+    },
+    {
+      "name": "litemap",
+      "version": "0.8.3",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#litemap@0.8.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "47d9d19d1d6efa0109d2f65ff4c85cddd50bd572e5a00127ab10987290bcefae",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "log",
+      "version": "0.4.34",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#log@0.4.34",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f9f8bd3e56ce4dfc153cf470fffbfa98c7620958b312ca5c3a4b8d5181fd13c6",
+      "repository": "https://github.com/rust-lang/log",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.3",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#memchr@2.8.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "cf8baf1c55e62ffcace7a9f06f4bd9cd3f0c4beb022d3b367256b91b87513d98",
+      "repository": "https://github.com/BurntSushi/memchr",
+      "license_declared": "Unlicense OR MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unlicense OR MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "alloc",
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "alloc",
+        "default",
+        "std"
+      ]
+    },
+    {
+      "name": "mio",
+      "version": "1.2.3",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#mio@1.2.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "4b18443e9c262bfe8fa82f51666e2642c53393f7e5c27b3e1aeab922cff5b9d8",
+      "repository": "https://github.com/tokio-rs/mio",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "net",
+        "os-ext",
+        "os-poll"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "net",
+        "os-ext",
+        "os-poll"
+      ]
+    },
+    {
+      "name": "nix",
+      "version": "0.31.3",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#nix@0.31.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "cf20d2fde8ff38632c426f1165ed7436270b44f199fc55284c38276f9db47c3d",
+      "repository": "https://github.com/nix-rust/nix",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "process",
+        "signal"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "process",
+        "signal"
+      ]
+    },
+    {
+      "name": "objc2",
+      "version": "0.6.4",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#objc2@0.6.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "3a12a8ed07aefc768292f076dc3ac8c48f3781c8f2d5851dd3d98950e8c5a89f",
+      "repository": "https://github.com/madsmtm/objc2",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [
+        "alloc",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "objc2-encode",
+      "version": "4.1.0",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#objc2-encode@4.1.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "ef25abbcd74fb2609453eb695bd2f860d389e457f67dc17cafc8b8cbc89d0c33",
+      "repository": "https://github.com/madsmtm/objc2",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [
+        "alloc",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.4",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#once_cell@1.21.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50",
+      "repository": "https://github.com/matklad/once_cell",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "alloc",
+        "default",
+        "race",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "alloc",
+        "default",
+        "race",
+        "std"
+      ]
+    },
+    {
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#percent-encoding@2.3.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "9b4f627cb1b25917193a259e49bdad08f671f8d9708acfd5fe0a8c1455d87220",
+      "repository": "https://github.com/servo/rust-url/",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "alloc",
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "alloc",
+        "default",
+        "std"
+      ]
+    },
+    {
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.17",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "a89322df9ebe1c1578d689c92318e070967d1042b512afbe49518723f4e6d5cd",
+      "repository": "https://github.com/taiki-e/pin-project-lite",
+      "license_declared": "Apache-2.0 OR MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Apache-2.0 OR MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "potential_utf",
+      "version": "0.1.6",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#potential_utf@0.1.6",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "d83eb9bc6d8e5cf568e7a1101d60ee05e81ed50ea106026f3d18deeb046d7661",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "zerovec"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "zerovec"
+      ]
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.107",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "985e7ec9bb745e6ce6535b544d84d6cd6f7ad8bd711c398938ae983b91a766d9",
+      "repository": "https://github.com/dtolnay/proc-macro2",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "proc-macro"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "proc-macro"
+      ]
+    },
+    {
+      "name": "quote",
+      "version": "1.0.47",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.47",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "1fbf4db142a473a8d80c26bbf18454ed458bf8d26c8219c331daecfdbd079001",
+      "repository": "https://github.com/dtolnay/quote",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "proc-macro"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "proc-macro"
+      ]
+    },
+    {
+      "name": "reqwest",
+      "version": "0.12.28",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#reqwest@0.12.28",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "eddd3ca559203180a307f12d114c268abf583f59b03cb906fd0b3ff8646c1147",
+      "repository": "https://github.com/seanmonstar/reqwest",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": true,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "blocking",
+        "json"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "blocking",
+        "json"
+      ]
+    },
+    {
+      "name": "rustversion",
+      "version": "1.0.23",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustversion@1.0.23",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "cf54715a573b99ac80df0bc206da022bcd442c974952c7b9720069370852e21f",
+      "repository": "https://github.com/dtolnay/rustversion",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "ryu",
+      "version": "1.0.23",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#ryu@1.0.23",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "9774ba4a74de5f7b1c1451ed6cd5285a32eddb5cccb8cc655a4e50009e06477f",
+      "repository": "https://github.com/dtolnay/ryu",
+      "license_declared": "Apache-2.0 OR BSL-1.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Apache-2.0 OR BSL-1.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "serde",
+      "version": "1.0.229",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.229",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "4148590afebada386688f18773da617792bf2ef03ffc1e4cbd2b1d45b023e0ba",
+      "repository": "https://github.com/serde-rs/serde",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": true,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "derive",
+        "serde_derive",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "derive",
+        "serde_derive",
+        "std"
+      ]
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.229",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_core@1.0.229",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "67dca2c9c51e58a4791a4b1ed58308b39c64224d349a935ab5039aa360942a48",
+      "repository": "https://github.com/serde-rs/serde",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "result",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "result",
+        "std"
+      ]
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_derive@1.0.229",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "e7a5d71263a5a7d47b41f6b3f06ba276f10cc18b0931f1799f710578e2309348",
+      "repository": "https://github.com/serde-rs/serde",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default"
+      ]
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.151",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_json@1.0.151",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "c841b55ecdae098c80dcae9cf767f6f8a0c2cdb3416bbef72181df4d0fe73f14",
+      "repository": "https://github.com/serde-rs/json",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": true,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "std"
+      ]
+    },
+    {
+      "name": "serde_urlencoded",
+      "version": "0.7.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_urlencoded@0.7.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "d3491c14715ca2294c4d6a88f15e84739788c1d030eed8c110436aafdaa2f3fd",
+      "repository": "https://github.com/nox/serde_urlencoded",
+      "license_declared": "MIT/Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": true,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "slab",
+      "version": "0.4.12",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#slab@0.4.12",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5",
+      "repository": "https://github.com/tokio-rs/slab",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "std"
+      ]
+    },
+    {
+      "name": "smallvec",
+      "version": "1.16.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#smallvec@1.16.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f9395f0f0eee849a9b707b2f06bb92a6a422090e2123bb2ef8e87a0e61892a8e",
+      "repository": "https://github.com/servo/rust-smallvec",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "const_generics",
+        "const_new"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "const_generics",
+        "const_new"
+      ]
+    },
+    {
+      "name": "socket2",
+      "version": "0.6.5",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#socket2@0.6.5",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "c3d1e2c7f27f8d4cb10542a02c49005dbd6e93095799d6f3be745fae9f8fedd4",
+      "repository": "https://github.com/rust-lang/socket2",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "all"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "all"
+      ]
+    },
+    {
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#stable_deref_trait@1.2.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "6ce2be8dc25455e1f91df71bfa12ad37d7af1092ae736f3a6cd0e37bc7810596",
+      "repository": "https://github.com/storyyeller/stable_deref_trait",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "syn",
+      "version": "3.0.6",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@3.0.6",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "8593e8e72159ed2257d083c7a454a85cbf854f37a0966d8d483aff8c8a3ebcee",
+      "repository": "https://github.com/dtolnay/syn",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "clone-impls",
+        "default",
+        "derive",
+        "extra-traits",
+        "fold",
+        "full",
+        "parsing",
+        "printing",
+        "proc-macro",
+        "visit",
+        "visit-mut"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "clone-impls",
+        "default",
+        "derive",
+        "extra-traits",
+        "fold",
+        "full",
+        "parsing",
+        "printing",
+        "proc-macro",
+        "visit",
+        "visit-mut"
+      ]
+    },
+    {
+      "name": "sync_wrapper",
+      "version": "1.0.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#sync_wrapper@1.0.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "0bf256ce5efdfa370213c1dabab5935a12e49f2c58d15e9eac2870d3b4f27263",
+      "repository": "https://github.com/Actyx/sync_wrapper",
+      "license_declared": "Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "futures",
+        "futures-core"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "futures",
+        "futures-core"
+      ]
+    },
+    {
+      "name": "synstructure",
+      "version": "0.14.0",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#synstructure@0.14.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "901704edd0dfe137f1987838ee4f259e4e063c31371bdb423f7ae38ec6f77f02",
+      "repository": "https://github.com/mystor/synstructure",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "proc-macro"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "proc-macro"
+      ]
+    },
+    {
+      "name": "tinystr",
+      "version": "0.8.4",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#tinystr@0.8.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "b1e27c91459209c2986af3dcf603a5a74a4368754ce37414f59acc971167f643",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "zerovec"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "zerovec"
+      ]
+    },
+    {
+      "name": "tokio",
+      "version": "1.53.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#tokio@1.53.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "202caea871b69668250d242070849eb495be178ed697a3e98aebce5bc81a0bed",
+      "repository": "https://github.com/tokio-rs/tokio",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "libc",
+        "mio",
+        "net",
+        "rt",
+        "socket2",
+        "sync",
+        "time",
+        "windows-sys"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "libc",
+        "mio",
+        "net",
+        "rt",
+        "socket2",
+        "sync",
+        "time",
+        "windows-sys"
+      ]
+    },
+    {
+      "name": "tower",
+      "version": "0.5.3",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#tower@0.5.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "ebe5ef63511595f1344e2d5cfa636d973292adc0eec1f0ad45fae9f0851ab1d4",
+      "repository": "https://github.com/tower-rs/tower",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "futures-core",
+        "futures-util",
+        "pin-project-lite",
+        "retry",
+        "sync_wrapper",
+        "timeout",
+        "tokio",
+        "util"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "futures-core",
+        "futures-util",
+        "pin-project-lite",
+        "retry",
+        "sync_wrapper",
+        "timeout",
+        "tokio",
+        "util"
+      ]
+    },
+    {
+      "name": "tower-http",
+      "version": "0.6.11",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#tower-http@0.6.11",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "4cfcf7e2740e6fc6d4d688b4ef00650406bb94adf4731e43c096c3a19fe40840",
+      "repository": "https://github.com/tower-rs/tower-http",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "follow-redirect",
+        "futures-util",
+        "tower"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "follow-redirect",
+        "futures-util",
+        "tower"
+      ]
+    },
+    {
+      "name": "tower-layer",
+      "version": "0.3.3",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#tower-layer@0.3.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "121c2a6cda46980bb0fcd1647ffaf6cd3fc79a013de288782836f6df9c48780e",
+      "repository": "https://github.com/tower-rs/tower",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "tower-service",
+      "version": "0.3.3",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#tower-service@0.3.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "8df9b6e13f2d32c91b9bd719c00d1958837bc7dec474d94952798cc8e69eeec3",
+      "repository": "https://github.com/tower-rs/tower",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "tracing",
+      "version": "0.1.44",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#tracing@0.1.44",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "63e71662fa4b2a2c3a26f570f037eb95bb1f85397f3cd8076caed2f026a6d100",
+      "repository": "https://github.com/tokio-rs/tracing",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "std"
+      ]
+    },
+    {
+      "name": "tracing-core",
+      "version": "0.1.36",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#tracing-core@0.1.36",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "db97caf9d906fbde555dd62fa95ddba9eecfd14cb388e4f491a66d74cd5fb79a",
+      "repository": "https://github.com/tokio-rs/tracing",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "once_cell",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "once_cell",
+        "std"
+      ]
+    },
+    {
+      "name": "try-lock",
+      "version": "0.2.5",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#try-lock@0.2.5",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "e421abadd41a4225275504ea4d6566923418b7f05506fbc9c0fe86ba7396114b",
+      "repository": "https://github.com/seanmonstar/try-lock",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.26",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.26",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "d245f478577f809a851594d02313b640fb437e0bb33866753cff937863096954",
+      "repository": "https://github.com/dtolnay/unicode-ident",
+      "license_declared": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "(MIT OR Apache-2.0) AND Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0 AND Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "url",
+      "version": "2.5.8",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#url@2.5.8",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "ff67a8a4397373c3ef660812acab3268222035010ab8680ec4215f38ba3d0eed",
+      "repository": "https://github.com/servo/rust-url",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "default",
+        "std"
+      ]
+    },
+    {
+      "name": "utf8_iter",
+      "version": "1.0.4",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#utf8_iter@1.0.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "b6c140620e7ffbb22c2dee59cafe6084a59b5ffc27a8859a5f0d494b5d52b6be",
+      "repository": "https://github.com/hsivonen/utf8_iter",
+      "license_declared": "Apache-2.0 OR MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Apache-2.0 OR MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "want",
+      "version": "0.3.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#want@0.3.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "bfa7760aed19e106de2c7c0b581b509f2f25d3dacaf737cb82ac61bc6d760b0e",
+      "repository": "https://github.com/seanmonstar/want",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "wasi",
+      "version": "0.11.1+wasi-snapshot-preview1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#wasi@0.11.1+wasi-snapshot-preview1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "ccf3ec651a847eb01de73ccad15eb7d99f80485de043efb2f370cd654f4ea44b",
+      "repository": "https://github.com/bytecodealliance/wasi",
+      "license_declared": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Apache-2.0 WITH LLVM-exception OR Apache-2.0 OR MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "wasm-bindgen",
+      "version": "0.2.129",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen@0.2.129",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "9bb54f33acc68fd454578d9820b0bde1a1a3d17aa17bb7b6595806d02886d409",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "wasm-bindgen-futures",
+      "version": "0.4.79",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen-futures@0.4.79",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "3cbab34de2d982e9b48e18d216d04c4a6f641066ff19ffb699980f591ee3610e",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/futures",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "wasm-bindgen-macro",
+      "version": "0.2.129",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen-macro@0.2.129",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "2e29d0c35b16e224a7eeb5cd2d25e3e1968fbd65604117b44d3b789d00ee8535",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/macro",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "wasm-bindgen-macro-support",
+      "version": "0.2.129",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen-macro-support@0.2.129",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "6f501a8bc3719dba86ef8ae4728879c08001bea749eb1333ac5b91e040e2a6b7",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/main/crates/macro-support",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "wasm-bindgen-shared",
+      "version": "0.2.129",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen-shared@0.2.129",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "23f0c9c52aa7cd7d77769a4cfe2a9adb1b331f489a41d912ce14513d5ab995c6",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/shared",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "web-sys",
+      "version": "0.3.106",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#web-sys@0.3.106",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "88261b9deccee56594c11a3460c462c41f58d148598fe70ad77070126a68aba4",
+      "repository": "https://github.com/wasm-bindgen/wasm-bindgen/tree/master/crates/web-sys",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [
+        "AbortController",
+        "AbortSignal",
+        "Blob",
+        "BlobPropertyBag",
+        "EventTarget",
+        "File",
+        "FormData",
+        "Headers",
+        "ReadableStream",
+        "Request",
+        "RequestCache",
+        "RequestCredentials",
+        "RequestInit",
+        "RequestMode",
+        "Response",
+        "ServiceWorkerGlobalScope",
+        "Window",
+        "WorkerGlobalScope",
+        "default",
+        "std"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "windows-link",
+      "version": "0.2.1",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-link@0.2.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f0805222e57f7521d6a62e36fa9163bc891acd422f971defe97d64e70d0a4fe5",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.61.2",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-sys@0.61.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc",
+      "repository": "https://github.com/microsoft/windows-rs",
+      "license_declared": "MIT OR Apache-2.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT OR Apache-2.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Apache-2.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": false,
+      "resolved_features_all_targets": [
+        "Wdk",
+        "Wdk_Foundation",
+        "Wdk_Storage",
+        "Wdk_Storage_FileSystem",
+        "Wdk_System",
+        "Wdk_System_IO",
+        "Win32",
+        "Win32_Foundation",
+        "Win32_Networking",
+        "Win32_Networking_WinSock",
+        "Win32_Security",
+        "Win32_Storage",
+        "Win32_Storage_FileSystem",
+        "Win32_System",
+        "Win32_System_Console",
+        "Win32_System_IO",
+        "Win32_System_Pipes",
+        "Win32_System_SystemServices",
+        "Win32_System_Threading",
+        "Win32_System_WindowsProgramming",
+        "default"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": null
+    },
+    {
+      "name": "writeable",
+      "version": "0.6.4",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#writeable@0.6.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "3ad82d2a33cdc9674dc7465672f271e096168fcdbe0f799d9e6db8c5892679dc",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "yoke",
+      "version": "0.8.3",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#yoke@0.8.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "709fe23a0424b6a435d82152b1bd3fdfb0833487d5fa90d05d42762a9891fef5",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "derive",
+        "zerofrom"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "derive",
+        "zerofrom"
+      ]
+    },
+    {
+      "name": "yoke-derive",
+      "version": "0.8.3",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#yoke-derive@0.8.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "33811428bee40dbceb6d545e95754741d17a6aef9a4849f0fd62e2ba4f412a78",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "zerofrom",
+      "version": "0.1.8",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#zerofrom@0.1.8",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "0ec05a11813ea801ff6d75110ad09cd0824ddba17dfe17128ea0d5f68e6c5272",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "derive"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "derive"
+      ]
+    },
+    {
+      "name": "zerofrom-derive",
+      "version": "0.1.8",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#zerofrom-derive@0.1.8",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "f75b4683f6c7f45248d4d64056a24298c6281e0993356d7d1b4a1a962ef10d4a",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "zerotrie",
+      "version": "0.2.5",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#zerotrie@0.2.5",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "4ea269c3bd32f0a32c321907a2ae912ba6f4649bb0fc764a15627e99a7095a3f",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "yoke",
+        "zerofrom"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "yoke",
+        "zerofrom"
+      ]
+    },
+    {
+      "name": "zerovec",
+      "version": "0.11.8",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#zerovec@0.11.8",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "bb0464e17806c1d976d5cba29399c7f08e516e279e2ba493f63123b5fca67dd8",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [
+        "derive",
+        "yoke"
+      ],
+      "resolved_features_x86_64_unknown_linux_gnu": [
+        "derive",
+        "yoke"
+      ]
+    },
+    {
+      "name": "zerovec-derive",
+      "version": "0.11.6",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#zerovec-derive@0.11.6",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "34df6fc39dbd26ddc9c10e6a2984476e13acce22e64e4487636ef494369225da",
+      "repository": "https://github.com/unicode-org/icu4x",
+      "license_declared": "Unicode-3.0",
+      "license_file_declared": null,
+      "license_expression_for_screening": "Unicode-3.0",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "Unicode-3.0",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    },
+    {
+      "name": "zmij",
+      "version": "1.0.23",
+      "package_id": "registry+https://github.com/rust-lang/crates.io-index#zmij@1.0.23",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "checksum": "29666d0abbfad1e3dc4dcf6144730dd3a3ab225bbbdac83319345b1b44ccfc1b",
+      "repository": "https://github.com/dtolnay/zmij",
+      "license_declared": "MIT",
+      "license_file_declared": null,
+      "license_expression_for_screening": "MIT",
+      "legacy_slash_notation": false,
+      "candidate_permissive_license_path": "MIT",
+      "direct_dependency": false,
+      "in_x86_64_unknown_linux_gnu_resolve": true,
+      "resolved_features_all_targets": [],
+      "resolved_features_x86_64_unknown_linux_gnu": []
+    }
+  ]
+}

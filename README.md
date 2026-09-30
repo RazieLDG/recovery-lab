@@ -112,9 +112,15 @@ The test suite must explicitly distinguish mock protocol/cleanup tests from real
 - Health failures must be observed during a bounded polling window; very brief failures can be missed
 - No recovery percentile/SLO statistics, dashboards, hosted service, or multi-fault schedules
 - HTTP only; future TLS and remote support require an explicit security design
-- Choose and add an open-source license before public distribution; no license or copyright owner is presumed
+- Cargo publication stays disabled; public releases require a separate release decision
 
 The next useful milestone is validating against a real application's reconnect/backoff behavior, then adding a sustained-recovery window and durable cleanup evidence.
+
+## License
+
+Licensed under [Apache License 2.0](LICENSE). The official license text is included
+unmodified. No legal copyright holder is inferred from the company attribution.
+Dependency license metadata and its review limits are documented in [DEPENDENCIES.md](DEPENDENCIES.md).
 
 ## Beyond Horizons
 

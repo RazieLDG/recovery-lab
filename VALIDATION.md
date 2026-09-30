@@ -1,6 +1,8 @@
 # Validation record — 2026-09-30
 
-Development snapshot: Recovery Lab 0.1.0 (not published; license pending).
+Development snapshot: Recovery Lab 0.1.0. At the initial validation, license
+selection was pending. The owner subsequently approved Apache-2.0 on the same
+date; see the licensing update below. No package release has been published.
 
 ## Environment and provenance
 
@@ -73,17 +75,40 @@ fixes. In addition to repeating Rust and real/mock integration checks, it verifi
 Reviewed `src/main.rs` SHA-256:
 `9caed63861719e3aa92b1f98057886517f4e74f5c07d8588edc9068ccb948705`.
 
+## Hosted CI — initial commit passed
+
+- Hosted CI passed for initial commit `d09922ca930e173b375dab2f56042211fc4371ee`
+  on 2026-09-30: [PR run 36709123329](https://github.com/RazieLDG/recovery-lab/actions/runs/36709123329).
+  This evidence applies to that exact commit; the licensing-update commit has
+  its own CI run, whose live status is available on the PR.
+
 ## Not verified / remaining limits
 
-- Hosted GitHub Actions has not run; workflow is supplied for the future repo
 - macOS, Windows, other architectures and alternate Rust/Toxiproxy versions
   have not been exercised
 - No production or remote faults were run; remote targets are deliberately rejected
 - SIGKILL, power loss and unreachable control planes cannot guarantee cleanup
 - No distributed/concurrent deterministic replay, sustained recovery window,
   latency-SLO assertion, or body/business-response assertion is claimed
-- Public release still needs an owner-approved license and publication decision
+- A package release still needs a separate publication decision; license selection
+  was resolved by the owner-approved Apache-2.0 update
 
 Local validation was completed before repository synchronization. Subsequent source
 publication is tracked through the repository draft pull request; no software
 release, merge, or deployment is included in this validation claim.
+
+## Licensing update — 2026-09-30
+
+The owner approved Apache-2.0 after the initial local validation and draft PR.
+The unmodified [official Apache license text](https://www.apache.org/licenses/LICENSE-2.0.txt)
+is now in `LICENSE` (SHA-256
+`cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30`), and Cargo
+metadata declares `license = "Apache-2.0"`. `publish = false` remains in force.
+No legal copyright-holder name has been invented. The earlier license-pending
+file was removed. `DEPENDENCIES.md` records the metadata-level dependency review
+and its limits; it is not a legal compliance certification.
+
+Checks were rerun after the licensing changes; logs are retained at
+`evidence/license-update-rust-checks.log` and
+`evidence/license-update-integration.log`. These do not replace the original
+dated evidence. The Rust implementation was unchanged.
